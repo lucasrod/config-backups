@@ -2,6 +2,8 @@
 
 Backups de configuraciones del sistema.
 
+**Repositorio:** https://github.com/lucasrod/config-backups
+
 ## Karabiner-Elements: Remapeo de Teclado Francés/EU
 
 **Archivo:** `karabiner-swap-numbers-symbols.json`
@@ -33,6 +35,15 @@ Esta configuración invierte el comportamiento de números y símbolos en teclad
 
 ### Cómo restaurar
 
+#### Opción 1: Script automático (recomendado)
+
+```bash
+cd ~/workspace/config-backups
+./restore-karabiner.sh
+```
+
+#### Opción 2: Manual
+
 1. **Copia el archivo:**
    ```bash
    cp ~/workspace/config-backups/karabiner-swap-numbers-symbols.json \
@@ -45,6 +56,15 @@ Esta configuración invierte el comportamiento de números y símbolos en teclad
    - Click en **Add rule**
    - Busca "Números sin Shift, símbolos con Shift (ignora Caps Lock)"
    - Click en **Enable**
+
+### Instalación en una nueva máquina
+
+```bash
+cd ~/workspace
+git clone https://github.com/lucasrod/config-backups.git
+cd config-backups
+./restore-karabiner.sh
+```
 
 ### Notas técnicas
 
